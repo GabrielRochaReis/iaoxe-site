@@ -1,0 +1,67 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const artigos = await getCollection('artigos', ({ data }) => !data.draft);
+  return artigos.map((artigo) => ({
+    params: { slug: artigo.slug },
+    props: { artigo }
+  }));
+}
+
+const { artigo } = Astro.props;
+const { Content } = await artigo.render();
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": artigo.data.title,
+  "description": artigo.data.description,
+  "datePublished": artigo.data.date.toISOString(),
+  "dateModified": (artigo.data.updated ?? artigo.data.date).toISOString(),
+  "author": {
+    "@type": "Person",
+    "name": "IA para Negócios"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "IA para Negócios"
+  },
+  "inLanguage": "pt-BR"
+};
+---
+
+<BaseLayout
+  title={`${artigo.data.title} — IA para Negócios`}
+  description={artigo.data.description}
+  schema={schema}
+>
+  <article class="post">
+    <header class="post-header">
+      <span class="categoria">{artigo.data.categoria}</span>
+      <h1>{artigo.data.title}</h1>
+      <p class="lead">{artigo.data.description}</p>
+      <div class="meta">
+        <time datetime={artigo.data.date.toISOString()}>
+          Publicado em {artigo.data.date.toLocaleDateString('pt-BR')}
+        </time>
+        {artigo.data.updated && (
+          <time datetime={artigo.data.updated.toISOString()}>
+            · Atualizado em {artigo.data.updated.toLocaleDateString('pt-BR')}
+          </time>
+        )}
+      </div>
+    </header>
+
+    <div class="post-content">
+      <Content />
+    </div>
+
+    <footer class="post-footer">
+      <p class="tags">
+        {artigo.data.tags.map((tag) => <span class="tag">#{tag}</span>)}
+      </p>
+    </footer>
+  </article>
+</BaseLayout>

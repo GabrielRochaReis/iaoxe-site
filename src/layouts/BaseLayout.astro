@@ -1,0 +1,66 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  schema?: object;
+}
+
+const { title, description, canonical, ogImage, schema } = Astro.props;
+const canonicalURL = canonical ?? new URL(Astro.url.pathname, Astro.site).toString();
+const ogImageURL = ogImage ? new URL(ogImage, Astro.site).toString() : null;
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content={Astro.generator} />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalURL} />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:site_name" content="iaoxe" />
+  {ogImageURL && <meta property="og:image" content={ogImageURL} />}
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+
+  {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
+
+  <link rel="stylesheet" href="/styles/global.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="logo">
+        <span class="logo-mark">ia</span><span class="logo-accent">oxe</span>
+      </a>
+      <nav>
+        <a href="/">Reviews</a>
+        <a href="/sobre">Sobre</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <slot />
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>iaoxe</strong> — reviews honestos de ferramentas de IA para empresas brasileiras. Sem enrolação, oxe.</p>
+      <p class="disclaimer">© {new Date().getFullYear()} iaoxe.com.br · Alguns links são afiliados — sem custo extra para você.</p>
+    </div>
+  </footer>
+</body>
+</html>
