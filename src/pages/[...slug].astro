@@ -22,46 +22,48 @@ const schema = {
   "dateModified": (artigo.data.updated ?? artigo.data.date).toISOString(),
   "author": {
     "@type": "Person",
-    "name": "IA para Negócios"
+    "name": "iaoxe"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "IA para Negócios"
+    "name": "iaoxe"
   },
   "inLanguage": "pt-BR"
 };
 ---
 
 <BaseLayout
-  title={`${artigo.data.title} — IA para Negócios`}
+  title={`${artigo.data.title} — iaoxe`}
   description={artigo.data.description}
   schema={schema}
 >
-  <article class="post">
-    <header class="post-header">
-      <span class="categoria">{artigo.data.categoria}</span>
-      <h1>{artigo.data.title}</h1>
-      <p class="lead">{artigo.data.description}</p>
-      <div class="meta">
-        <time datetime={artigo.data.date.toISOString()}>
-          Publicado em {artigo.data.date.toLocaleDateString('pt-BR')}
-        </time>
-        {artigo.data.updated && (
-          <time datetime={artigo.data.updated.toISOString()}>
-            · Atualizado em {artigo.data.updated.toLocaleDateString('pt-BR')}
+  <div class="container--narrow" style="padding-top: 2rem;">
+    <article class="post">
+      <header class="post-header">
+        <span class="categoria">{artigo.data.categoria}</span>
+        <h1>{artigo.data.title}</h1>
+        <p class="lead">{artigo.data.description}</p>
+        <div class="meta">
+          <time datetime={artigo.data.date.toISOString()}>
+            Publicado em {artigo.data.date.toLocaleDateString('pt-BR')}
           </time>
-        )}
+          {artigo.data.updated && (
+            <time datetime={artigo.data.updated.toISOString()}>
+              &middot; Atualizado em {artigo.data.updated.toLocaleDateString('pt-BR')}
+            </time>
+          )}
+        </div>
+      </header>
+
+      <div class="post-content">
+        <Content />
       </div>
-    </header>
 
-    <div class="post-content">
-      <Content />
-    </div>
-
-    <footer class="post-footer">
-      <p class="tags">
-        {artigo.data.tags.map((tag) => <span class="tag">#{tag}</span>)}
-      </p>
-    </footer>
-  </article>
+      <footer class="post-footer">
+        <p class="tags">
+          {artigo.data.tags.map((tag) => <span class="tag">#{tag}</span>)}
+        </p>
+      </footer>
+    </article>
+  </div>
 </BaseLayout>

@@ -11,28 +11,32 @@ const artigos = (await getCollection('artigos', ({ data }) => !data.draft))
   description="Testamos cada ferramenta por pelo menos 30 dias antes de recomendar. Comparativos, reviews e guias práticos em português, para quem tem negócio para tocar."
 >
   <section class="hero">
-    <h1>As melhores ferramentas de IA, testadas de verdade. <em>Oxe!</em></h1>
-    <p class="lead">
-      Reviews sem hype, com preço em real, feitos por quem entende de código
-      e não tem medo de dizer quando uma ferramenta é uma furada.
-    </p>
+    <div class="container">
+      <h1>As melhores ferramentas de IA, testadas de verdade. <em>Oxe!</em></h1>
+      <p class="lead">
+        Reviews sem hype, com preço em real, feitos por quem entende de código
+        e não tem medo de dizer quando uma ferramenta é uma furada.
+      </p>
+    </div>
   </section>
 
-  <section class="artigos-lista">
-    <h2>Últimos reviews e guias</h2>
-    <ul>
-      {artigos.map((artigo) => (
-        <li>
-          <a href={`/${artigo.slug}`}>
-            <span class="categoria">{artigo.data.categoria}</span>
-            <h3>{artigo.data.title}</h3>
-            <p>{artigo.data.description}</p>
-            <time datetime={artigo.data.date.toISOString()}>
-              {artigo.data.date.toLocaleDateString('pt-BR')}
-            </time>
-          </a>
-        </li>
-      ))}
-    </ul>
-  </section>
+  <div class="container">
+    <section class="artigos-lista">
+      <h2 class="section-title">Últimos reviews e guias</h2>
+      <ul>
+        {artigos.map((artigo) => (
+          <li>
+            <a href={`/${artigo.slug}`}>
+              <span class="categoria">{artigo.data.categoria}</span>
+              <h3>{artigo.data.title}</h3>
+              <p>{artigo.data.description}</p>
+              <time datetime={artigo.data.date.toISOString()}>
+                {artigo.data.date.toLocaleDateString('pt-BR')}
+              </time>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </div>
 </BaseLayout>
