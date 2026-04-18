@@ -77,7 +77,7 @@ Se você é programador Java/Python/JavaScript, os dois funcionam muito bem — 
 
 ## Privacidade e treino
 
-Ambos oferecem opção de não usar seus dados para treino, Por padrão:
+Ambos oferecem opção de não usar seus dados para treino. Por padrão:
 - **ChatGPT (conta pessoal):** pode usar os chats para treino, você precisa desativar.
 - **Claude:** não usa seus chats para treino por padrão desde 2025.
 
@@ -117,6 +117,8 @@ Sim, muita gente faz. Usar Claude para estruturar e ChatGPT para gerar imagens �
 Não existe "melhor" absoluto — existe "melhor para o que você faz". Se você só pode ter um, e seu trabalho é majoritariamente texto (ler, escrever, analisar), Claude. Se é majoritariamente criação multimodal e exploração, ChatGPT.
 
 A boa notícia: os dois cumprem bem, e qualquer um deles bem usado já muda sua produtividade. A escolha errada é não escolher.
+
+**Alternativa com custo menor:** se US$ 20/mês ainda parece alto para começar, o [**Rytr**](https://rytr.me?via=gabriel-reis) é uma opção de entrada com plano gratuito — cobre copy curto, e-mails e posts de marketing sem gastar nada. Use para experimentar antes de escalar para ChatGPT ou Claude.
 
 ---
 

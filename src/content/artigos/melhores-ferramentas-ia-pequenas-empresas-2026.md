@@ -34,7 +34,7 @@ Com isso em mente, vamos às ferramentas.
 | ElevenLabs | Voz natural em português | R$ 25/mês | Sim |
 | HeyGen | Vídeos com avatar | R$ 130/mês | Limitado |
 | Notion AI | Organização + escrita | R$ 50/mês | Não |
-| Jasper | Marketing em escala | R$ 250/mês | Não |
+| Rytr | Copy e marketing rápido | R$ 0–50/mês | Sim |
 | Descript | Edição de áudio/vídeo | R$ 60/mês | Sim |
 | Perplexity | Pesquisa com fontes | R$ 100/mês | Sim |
 | Zapier | Automação corporativa | R$ 100+/mês | Sim |
@@ -117,15 +117,17 @@ Com isso em mente, vamos às ferramentas.
 
 **Preço:** US$ 10/mês (~R$ 55) por usuário, em cima do plano Notion.
 
-## 8. Jasper — marketing em volume
+## 8. Rytr — escrita rápida sem gastar muito
 
-**Pra quem é:** times de marketing que produzem 20+ peças/mês.
+**Pra quem é:** empreendedores que precisam de copy, posts e e-mails mas não querem pagar R$ 270/mês.
 
-**O que faz bem:** templates específicos (ads Facebook, descrição de produto, e-mail sequence), "brand voice" que mantém o tom consistente em todo conteúdo.
+**O que faz bem:** gera textos de marketing em português (posts, e-mails, descrições de produto, ads) com templates prontos. Interface simples, curva de aprendizado mínima. O diferencial: plano gratuito generoso (10.000 caracteres/mês) e plano pago acessível.
 
-**Onde decepciona:** caro pra empreendedor solo. Para quem produz pouco, ChatGPT + bons prompts faz o mesmo.
+**Onde decepciona:** textos longos e conteúdo editorial ainda ficam aquém do Claude ou ChatGPT. Melhor para copy curto e marketing direto.
 
-**Preço:** US$ 49/mês (~R$ 270) no plano inicial.
+**Preço:** gratuito até 10k caracteres/mês. Plano Unlimited a partir de US$ 9/mês (~R$ 50). [**Testar o Rytr grátis →**](https://rytr.me?via=gabriel-reis)
+
+**Alternativa mais cara:** Jasper (US$ 49/mês, ~R$ 270) tem mais recursos mas entrega valor similar para a maioria dos casos de uso de PME.
 
 ## 9. Descript — edição que parece mágica
 
@@ -164,6 +166,8 @@ Se você está começando, pegue três ferramentas e pare de procurar:
 1. **ChatGPT Plus OU Claude Pro** (um deles, não os dois) — seu cérebro externo para escrita e análise.
 2. **Make.com** — para automatizar o que hoje você faz na mão.
 3. **Canva Pro** — para qualquer arte visual.
+
+Se o orçamento for limitado, substitua o ChatGPT/Claude por [**Rytr**](https://rytr.me?via=gabriel-reis) no começo — cobre copy e marketing por R$ 50/mês ou até de graça.
 
 Três assinaturas, cerca de R$ 200/mês, e cobre 80% dos casos. Você pode viver muitos meses só com esses três antes de precisar de algo mais específico.
 

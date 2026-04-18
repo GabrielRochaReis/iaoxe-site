@@ -60,7 +60,7 @@ Total realista: R$ 100–200/mês para um volume de 300–1.000 mensagens/dia.
 
 ### 1. Prepare a base de conhecimento do bot
 
-Abra um documento e escreva:
+Abra um documento e escreva (dica: use o [**Rytr**](https://rytr.me?via=gabriel-reis) para gerar as respostas do FAQ automaticamente — escolha o template "Answer in bullet points" e cole cada pergunta):
 - **Sobre o negócio** (o que vende, para quem, diferencial)
 - **FAQ** (as 20 perguntas que você mais responde — com resposta ideal)
 - **Tom de voz** (formal? próximo? engraçado?)
@@ -150,7 +150,7 @@ Automatizar WhatsApp com IA deixou de ser projeto grande de empresa — virou op
 
 A recompensa: horas livres, resposta instantânea 24/7, clientes menos perdidos. O custo: tempo inicial de configuração e R$ 100–200/mês de ferramentas.
 
-Se você for configurar esse mês, comece pelo FAQ. 80% do sucesso está no documento de base que você escreve antes de tocar em qualquer ferramenta.
+Se você for configurar esse mês, comece pelo FAQ. 80% do sucesso está no documento de base que você escreve antes de tocar em qualquer ferramenta. Para agilizar essa etapa, o [**Rytr**](https://rytr.me?via=gabriel-reis) tem um plano gratuito que ajuda a gerar as respostas do seu FAQ em minutos.
 
 ---
 
